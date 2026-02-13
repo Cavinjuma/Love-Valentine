@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #8B0000, #ff4d6d);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+header {
+    padding: 40px 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.8);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.love-letter {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    animation: fadeInUp 2s ease;
+    line-height: 1.9;
+    font-size: 1.1rem;
+}
+
+.gallery {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.gallery img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.7);
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+    <source src="Taya.mpeg" type="audio/mpeg">
+</audio>
+
+<header>My Valentines ❤️<br><i>Mary Muthama🥰</i></header>
+
+<div class="container">
+    <div class="love-letter">
+        <p>
+        Hey Love🥰...<br>I tried to sit down and write something simple, but how do you summarize someone who completely rearranged your heart❤️? You walked into my life so effortlessly, and now you live in my thoughts rent-free... not that I’m complaining about rent😂😂. Honestly, if loving you were a sport, I’d be an undefeated champion by now💯, leave alone Arsenal😂. You’re the only person who can make my heart race and calm it down at the same time. Your Ka-beautiful smile is my favorite notification🥰, your laugh is my favorite song, not mentioning your hugs, aaw🥰? Those are my official recharge and therapy stations🥰. I don’t know how you do it, but you make ordinary days feel special just by being in them.❤️<br> Asante sana for everything Mpenzi❤️...
+        </p>
+        <br>
+        <p>
+        But beyond the jokes and playful teasing, I need you to know this: I love you deeply, genuinely, and intentionally. You bring peace to my chaos and light to my doubts. You make me want to grow, to build, to become better — not because you demand it, but because loving you makes me want to give you the best version of me. With you, I feel safe, understood, and unbelievably lucky. If forever had a face, it would look a lot like you. And no matter what life throws at us, just know that my heart chose you — and it’s not changing its mind anytime soon. ❤️
+        </p>
+    </div>
+
+    <div class="gallery">
+        <img src="Love.jpeg" alt="My Gorgeous Love">
+        <img src="Her.jpeg" alt="Beautiful Smile">
+        <img src="Smiles.jpeg" alt="My Forever">
+    </div>
+</div>
+<!-- PLAYFUL BUTTON -->
+<button id="playBtn">Click To view Gift🥰❤️</button>
+
+<!-- VIDEO CONTAINER -->
+<div id="videoContainer">
+    <video id="loveVideo" controls>
+        <source src="Gift.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<style>
+#playBtn{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d6d;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:0.3s ease;
+    position:relative;
+}
+
+/* Playful hover effect (button shifts position randomly) */
+#playBtn:hover{
+    transform:translate(
+        calc(10px - 20px * random()),
+        calc(10px - 20px * random())
+    );
+}
+
+/* Video container hidden initially */
+#videoContainer{
+    margin-top:30px;
+    display:none;
+    animation:fadeIn 1s ease forwards;
+}
+
+video{
+    width:100%;
+    max-width:700px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(0.9);}
+    to{opacity:1; transform:scale(1);}
+}
+</style>
+
+<script>
+// Playful moving effect (real JS movement)
+const btn = document.getElementById("playBtn");
+
+btn.addEventListener("mouseover", () => {
+    const x = Math.random() * 50 - 25;
+    const y = Math.random() * 50 - 25;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+});
+
+// When clicked, show and play video
+btn.addEventListener("click", () => {
+    document.getElementById("videoContainer").style.display = "block";
+    const video = document.getElementById("loveVideo");
+    video.play();
+    btn.innerText = "Okay Fine… Here It Is 😍🎬";
+});
+</script>
+
+<footer>
+    Made with ❤️ just for you, Mary🥰
+</footer>
+
+<script>
+/* Generate Floating Hearts */
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 4 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
